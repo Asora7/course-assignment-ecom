@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchProductById } from "../data/api";  // Use the new function
 import { useCart } from "../context/CartContext";
+import Layout from "../components/Layout"; // Import Layout
 
 function ProductPage() {
     const { id } = useParams();
@@ -26,7 +27,7 @@ function ProductPage() {
     const discount = product.price - product.discountedPrice;
 
     return (
-        <div>
+        <Layout>  {/* Wrap with Layout */}
             <h1>{product.title}</h1>
             <img src={product.image.url} alt={product.image.alt} />
             <p>{product.description}</p>
@@ -43,7 +44,7 @@ function ProductPage() {
                     </ul>
                 </div>
             )}
-        </div>
+        </Layout>
     );
 }
 
