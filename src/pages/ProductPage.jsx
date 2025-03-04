@@ -1,42 +1,50 @@
-// pages/ProductPage.jsx
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { fetchProducts } from "../data/api";
+import { fetchProductById } from "../data/api";  // Use the new function
 import { useCart } from "../context/CartContext";
 
 function ProductPage() {
-  const { id } = useParams();
-  const [product, setProduct] = useState(null);
-  const { addToCart } = useCart();
+    const { id } = useParams();
+    const [product, setProduct] = useState(null);
+    const { addToCart } = useCart();
 
-  useEffect(() => {
-    fetchProducts(id).then(setProduct);
-  }, [id]);
+    useEffect(() => {
+        async function getProduct() {
+            try {
+                const data = await fetchProductById(id);
+                setProduct(data);
+            } catch (error) {
+                console.error("Error fetching product:", error);
+            }
+        }
 
-  if (!product) return <p>Loading...</p>;
+        getProduct();
+    }, [id]);
 
-  const discount = product.price - product.discountedPrice;
+    if (!product) return <p>Loading...</p>;
 
-  return (
-    <div>
-      <h1>{product.title}</h1>
-      <img src={product.imageUrl} alt={product.title} />
-      <p>{product.description}</p>
-      <p>Price: ${product.discountedPrice} {discount > 0 && <span>({discount} off)</span>}</p>
-      <button onClick={() => addToCart(product)}>Add to Cart</button>
+    const discount = product.price - product.discountedPrice;
 
-      {product.reviews && product.reviews.length > 0 && (
+    return (
         <div>
-          <h3>Reviews:</h3>
-          <ul>
-            {product.reviews.map((review, index) => (
-              <li key={index}>{review}</li>
-            ))}
-          </ul>
+            <h1>{product.title}</h1>
+            <img src={product.image.url} alt={product.image.alt} />
+            <p>{product.description}</p>
+            <p>Price: ${product.discountedPrice} {discount > 0 && <span>({discount} off)</span>}</p>
+            <button onClick={() => addToCart(product)}>Add to Cart</button>
+
+            {product.reviews && product.reviews.length > 0 && (
+                <div>
+                    <h3>Reviews:</h3>
+                    <ul>
+                        {product.reviews.map((review) => (
+                            <li key={review.id}>{review.username}: {review.description}</li>
+                        ))}
+                    </ul>
+                </div>
+            )}
         </div>
-      )}
-    </div>
-  );
+    );
 }
 
 export default ProductPage;
