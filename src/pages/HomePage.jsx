@@ -36,6 +36,11 @@ function HomePage() {
       <ul>
         {filteredProducts.map((product) => (
           <li key={product.id}>
+            <img 
+              src={product.image?.url} 
+              alt={product.image?.alt || product.title} 
+              width="100" // Temporary size, you can adjust later
+            />
             {product.title} - ${product.discountedPrice}
             <a href={`/product/${product.id}`}>View Product</a>
           </li>
