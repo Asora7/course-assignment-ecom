@@ -1,3 +1,5 @@
+//data/api.js
+
 // Fetch all products
 export async function fetchProducts() {
     const response = await fetch("https://v2.api.noroff.dev/online-shop");
