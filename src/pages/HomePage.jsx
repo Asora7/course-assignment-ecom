@@ -1,6 +1,9 @@
+//pages/HomePage.jsx
+
 import { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import { fetchProducts } from "../data/api";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   const [products, setProducts] = useState([]);
@@ -42,7 +45,7 @@ function HomePage() {
               width="100" // Temporary size, you can adjust later
             />
             {product.title} - ${product.discountedPrice}
-            <a href={`/product/${product.id}`}>View Product</a>
+            <Link to={`/product/${product.id}`}>View Product</Link>
           </li>
         ))}
       </ul>

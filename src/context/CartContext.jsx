@@ -1,6 +1,6 @@
 //context/CartContext.jsx
 
-import { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useEffect, useCallback } from "react";
 
 // Create context
 const CartContext = createContext();
@@ -37,10 +37,10 @@ export function CartProvider({ children }) {
         setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
     }
 
-    // Clear cart (for checkout success page)
-    function clearCart() {
+    // Memoize clearCart to prevent unnecessary re-renders
+    const clearCart = useCallback(() => {
         setCart([]);
-    }
+    }, []); // Empty dependency array means this function will only be created once
 
     // Save the cart to local storage whenever it changes
     useEffect(() => {
@@ -51,7 +51,7 @@ export function CartProvider({ children }) {
         cart,
         addToCart,
         removeFromCart,
-        clearCart,
+        clearCart, // Provide the memoized clearCart function
     };
 
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
