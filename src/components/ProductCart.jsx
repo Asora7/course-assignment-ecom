@@ -1,31 +1,48 @@
 // components/ProductCart.jsx
 
 import { useCart } from "../context/CartContext";
+import { FaTrash } from 'react-icons/fa'; // Import Trash icon
+import {
+  CartItemCard,
+  ProductImage,
+  ProductDetails,
+  ProductTitle,
+  ProductPriceQuantity,
+  RemoveButton,
+  TotalPriceSection,
+} from "../components/styles/CartPage.styles";
 
 function ProductCart() {
   const { cart, removeFromCart } = useCart();
 
   return (
     <div>
-      <h2>Your Cart</h2>
-      <ul style={{ listStyle: "none", padding: 0 }}>
-        {cart.map((item) => (
-          <li key={item.id} style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1rem" }}>
-            {/* Product Image */}
-            <img 
-               src={item.image?.url}
-               alt={item.image?.alt || item.title} 
-               style={{ width: "80px", height: "80px", objectFit: "cover", borderRadius: "8px" }} 
-            />
-            {/* Product Details */}
-            <div>
-              <p>{item.title} - {item.quantity} x ${item.discountedPrice}</p>
-              <button onClick={() => removeFromCart(item.id)}>Remove</button>
-            </div>
-          </li>
-        ))}
-      </ul>
-      <p>Total: ${cart.reduce((total, item) => total + item.discountedPrice * item.quantity, 0).toFixed(2)}</p>
+      {cart.map((item) => (
+        <CartItemCard key={item.id}>
+          <ProductImage
+            src={item.image?.url}
+            alt={item.image?.alt || item.title}
+          />
+          <ProductDetails>
+            <ProductTitle>{item.title}</ProductTitle>
+            <ProductPriceQuantity>
+              ${item.discountedPrice} x {item.quantity}
+            </ProductPriceQuantity>
+          </ProductDetails>
+          <RemoveButton onClick={() => removeFromCart(item.id)}>
+            <FaTrash /> {/* Show the trash icon */}
+          </RemoveButton>
+        </CartItemCard>
+      ))}
+      <TotalPriceSection>
+        Total: $
+        {cart
+          .reduce(
+            (total, item) => total + item.discountedPrice * item.quantity,
+            0
+          )
+          .toFixed(2)}
+      </TotalPriceSection>
     </div>
   );
 }
