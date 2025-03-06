@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import { fetchProducts } from "../data/api";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";  // Keep Link here
+import * as S from "../components/styles/HomePage.styles"; // Import styled components
 
 function HomePage() {
   const [products, setProducts] = useState([]);
@@ -36,19 +37,23 @@ function HomePage() {
         onChange={(e) => setSearchTerm(e.target.value)} // Update search term
       />
       {error && <p>Error: {error}</p>}
-      <ul>
+      
+      {/* Product grid */}
+      <S.ProductGrid>
         {filteredProducts.map((product) => (
-          <li key={product.id}>
-            <img 
+          <S.ProductCard key={product.id}>
+            <S.ProductImage 
               src={product.image?.url} 
               alt={product.image?.alt || product.title} 
-              width="100" // Temporary size, you can adjust later
             />
-            {product.title} - ${product.discountedPrice}
-            <Link to={`/product/${product.id}`}>View Product</Link>
-          </li>
+            <S.ProductTitle>{product.title}</S.ProductTitle>
+            <S.ProductPrice>${product.discountedPrice}</S.ProductPrice>
+            <Link to={`/product/${product.id}`}>
+              <S.ViewButton>View Product</S.ViewButton>
+            </Link>
+          </S.ProductCard>
         ))}
-      </ul>
+      </S.ProductGrid>
     </Layout>
   );
 }
