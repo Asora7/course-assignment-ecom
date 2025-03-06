@@ -63,7 +63,7 @@ export const ProductTitle = styled.p`
 // Product price and quantity
 export const ProductPriceQuantity = styled.p`
   font-size: 1rem;
-  color: #666;
+  color: #444;
 `;
 
 // Remove button
