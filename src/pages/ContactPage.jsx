@@ -1,6 +1,16 @@
 // pages/ContactPage.jsx
 import { useState } from "react";
-import Layout from "../components/Layout"; // Import Layout
+import Layout from "../components/Layout";
+import {
+    ContactWrapper,
+    Title,
+    Form,
+    Input,
+    Textarea,
+    Button,
+    ErrorMessage,
+    SuccessMessage,
+} from "../components/styles/ContactPage.styles";
 
 function ContactPage() {
     const [formData, setFormData] = useState({
@@ -24,7 +34,6 @@ function ContactPage() {
         if (formData.subject.length < 3) newErrors.subject = "Subject must be at least 3 characters.";
         if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Email must be valid.";
         if (formData.body.length < 3) newErrors.body = "Body must be at least 3 characters.";
-
         return newErrors;
     }
 
@@ -33,50 +42,57 @@ function ContactPage() {
         const validationErrors = validateForm();
         if (Object.keys(validationErrors).length === 0) {
             setSubmitted(true);
-            console.log(formData); // You can replace this with actual form submission logic
+            console.log(formData); // Replace with actual submission logic if needed
         } else {
             setErrors(validationErrors);
         }
     }
 
     return (
-        <Layout> {/* Wrap with Layout */}
-            <h1>Contact Page</h1>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    name="fullName"
-                    value={formData.fullName}
-                    onChange={handleChange}
-                    placeholder="Full Name"
-                />
-                {errors.fullName && <p>{errors.fullName}</p>}
-                <input
-                    type="text"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    placeholder="Subject"
-                />
-                {errors.subject && <p>{errors.subject}</p>}
-                <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Email"
-                />
-                {errors.email && <p>{errors.email}</p>}
-                <textarea
-                    name="body"
-                    value={formData.body}
-                    onChange={handleChange}
-                    placeholder="Message"
-                />
-                {errors.body && <p>{errors.body}</p>}
-                <button type="submit">Submit</button>
-            </form>
-            {submitted && <p>Thank you for contacting us!</p>}
+        <Layout>
+            <ContactWrapper>
+                <Title>Contact Us</Title>
+                <Form onSubmit={handleSubmit}>
+                    <Input
+                        type="text"
+                        name="fullName"
+                        value={formData.fullName}
+                        onChange={handleChange}
+                        placeholder="Full Name"
+                    />
+                    {errors.fullName && <ErrorMessage>{errors.fullName}</ErrorMessage>}
+
+                    <Input
+                        type="text"
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        placeholder="Subject"
+                    />
+                    {errors.subject && <ErrorMessage>{errors.subject}</ErrorMessage>}
+
+                    <Input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder="Email"
+                    />
+                    {errors.email && <ErrorMessage>{errors.email}</ErrorMessage>}
+
+                    <Textarea
+                        name="body"
+                        value={formData.body}
+                        onChange={handleChange}
+                        placeholder="Message"
+                    />
+                    {errors.body && <ErrorMessage>{errors.body}</ErrorMessage>}
+
+                    <Button type="submit">Submit</Button>
+                </Form>
+
+                {submitted && <SuccessMessage>Thank you for contacting us!</SuccessMessage>}
+            </ContactWrapper>
         </Layout>
     );
 }
