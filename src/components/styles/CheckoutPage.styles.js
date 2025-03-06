@@ -29,7 +29,6 @@ export const CheckoutPageTitle = styled.h1`
 export const ProductList = styled.ul`
   list-style: none;
   padding: 0;
-  width: 100%;
   margin-bottom: 1rem;  // Reduced margin-bottom
 `;
 
@@ -43,9 +42,8 @@ export const CheckoutItemCard = styled.li`
   padding: 0.8rem;  // Keep padding consistent
   margin-bottom: 1rem;  // Spacing between cards
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;  // Ensures it takes full width
+
   max-width: 500px;  // Match CartItemCard max-width
-  margin: 0 auto;  // Horizontally center the card
   box-sizing: border-box;  // Prevents extra width due to padding
 `;
 
@@ -84,13 +82,13 @@ export const TotalPriceSection = styled.div`
   margin-top: 1rem;
   color: #333;
   text-align: center;
-  width: 100%;
-  max-width: 200px;  // Matches the width of the button
-  padding: 0.5rem 1rem;  // Reduced padding for compactness
+  max-width: 300px;  // Matches the width of the button
+  padding: 1rem;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 1.5rem;  // Added some space below
+  align-self: center;  /* Ensure it's centered within the container */
 `;
 
 // Checkout button - More compact
