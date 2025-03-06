@@ -9,6 +9,11 @@ export const Navbar = styled.nav`
   padding: 1.5rem 2rem;
   background-color: black;
   color: white;
+  position: fixed; /* This makes it fixed */
+  top: 0; /* Keeps it at the top */
+  left: 0; /* Aligns it to the left */
+  right: 0; /* Aligns it to the right */
+  z-index: 1000; /* Ensures the header is above other content */
 `;
 
 export const Logo = styled.h1`

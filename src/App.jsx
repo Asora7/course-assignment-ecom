@@ -7,19 +7,23 @@ import CartPage from "./pages/CartPage";
 import ProductPage from "./pages/ProductPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import CheckoutSuccessPage from "./pages/CheckoutSuccessPage";
+import GlobalStyles from './components/styles/Global.styles'; // Import the GlobalStyles component
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/cart" element={<CartPage />} />
-        <Route path="/product/:id" element={<ProductPage />} />
-        <Route path="/checkout" element={<CheckoutPage />} />
-        <Route path="/checkout-success" element={<CheckoutSuccessPage />} />
-      </Routes>
-    </Router>
+    <>
+      <GlobalStyles /> {/* Apply Global Styles */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/checkout-success" element={<CheckoutSuccessPage />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
