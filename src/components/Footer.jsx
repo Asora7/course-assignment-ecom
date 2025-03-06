@@ -1,6 +1,12 @@
+import React from 'react';
+import { FooterContainer, FooterText } from './styles/Footer.styles';
+
 function Footer() {
-    return <footer>© 2025 My eCom Store</footer>;
-  }
-  
-  export default Footer;
-  
+  return (
+    <FooterContainer>
+      <FooterText>© 2025 My eCom Store</FooterText>
+    </FooterContainer>
+  );
+}
+
+export default Footer;
