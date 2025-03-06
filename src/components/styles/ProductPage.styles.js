@@ -21,7 +21,7 @@ export const ProductTitle = styled.h1`
 
 export const ProductImage = styled.img`
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
