@@ -1,37 +1,22 @@
 // components/Header.jsx
 import { Link } from "react-router-dom";
-import CartIcon from "./CartIcon"; // Import CartIcon
-import styled from 'styled-components';
-
-const Navbar = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background-color: #333;
-  color: white;
-
-  a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1rem;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-`;
+import CartIcon from "./CartIcon";
+import { Navbar, Logo, HeaderWrapper, NavContainer, NavLinks } from "./styles/Header.styles";
 
 function Header() {
   return (
-    <header>
+    <HeaderWrapper>
       <Navbar>
-        <div>
-          <Link to="/">Home</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
-        <CartIcon />
+        <Logo>Urban Nest</Logo>
+        <NavContainer>
+          <NavLinks>
+            <Link to="/">Home</Link>
+            <Link to="/contact">Contact</Link>
+          </NavLinks>
+          <CartIcon />
+        </NavContainer>
       </Navbar>
-    </header>
+    </HeaderWrapper>
   );
 }
 

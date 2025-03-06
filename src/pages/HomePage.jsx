@@ -29,7 +29,6 @@ function HomePage() {
 
   return (
     <Layout>
-      <h1>Home Page</h1>
       <input
         type="text"
         placeholder="Search for products"
