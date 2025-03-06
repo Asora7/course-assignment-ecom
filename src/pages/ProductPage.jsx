@@ -2,9 +2,10 @@
 
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { fetchProductById } from "../data/api";  // Use the new function
+import { fetchProductById } from "../data/api";
 import { useCart } from "../context/CartContext";
-import Layout from "../components/Layout"; // Import Layout
+import Layout from "../components/Layout";
+import * as S from '../components/styles/ProductPage.styles'; // Import styles
 
 function ProductPage() {
     const { id } = useParams();
@@ -29,23 +30,32 @@ function ProductPage() {
     const discount = product.price - product.discountedPrice;
 
     return (
-        <Layout>  {/* Wrap with Layout */}
-            <h1>{product.title}</h1>
-            <img src={product.image.url} alt={product.image.alt} />
-            <p>{product.description}</p>
-            <p>Price: ${product.discountedPrice} {discount > 0 && <span>({discount} off)</span>}</p>
-            <button onClick={() => addToCart(product)}>Add to Cart</button>
+        <Layout>
+            <S.ProductContainer>
+                <S.ProductTitle>{product.title}</S.ProductTitle>
+                <S.ProductImage src={product.image.url} alt={product.image.alt} />
+                <S.ProductDescription>{product.description}</S.ProductDescription>
+                <S.ProductPrice>
+                    ${product.discountedPrice}
+                    {discount > 0 && <S.DiscountText>({discount} off)</S.DiscountText>}
+                </S.ProductPrice>
+                <S.AddToCartButton onClick={() => addToCart(product)}>
+                    Add to Cart
+                </S.AddToCartButton>
 
-            {product.reviews && product.reviews.length > 0 && (
-                <div>
-                    <h3>Reviews:</h3>
-                    <ul>
-                        {product.reviews.map((review) => (
-                            <li key={review.id}>{review.username}: {review.description}</li>
-                        ))}
-                    </ul>
-                </div>
-            )}
+                {product.reviews && product.reviews.length > 0 && (
+                    <S.ReviewsSection>
+                        <S.ReviewTitle>Reviews:</S.ReviewTitle>
+                        <S.ReviewList>
+                            {product.reviews.map((review) => (
+                                <S.ReviewItem key={review.id}>
+                                    <strong>{review.username}:</strong> {review.description}
+                                </S.ReviewItem>
+                            ))}
+                        </S.ReviewList>
+                    </S.ReviewsSection>
+                )}
+            </S.ProductContainer>
         </Layout>
     );
 }
