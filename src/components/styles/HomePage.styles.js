@@ -1,11 +1,17 @@
 // src/components/styles/HomePage.styles.js
+
 import styled from 'styled-components';
+import { FaSearch } from 'react-icons/fa'; // Import search icon
+
+export const PageContainer = styled.div`
+  padding: 0 20px;  /* Add padding on left and right to align with grid */
+`;
 
 export const ProductGrid = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
-  padding: 0;
+  padding: 0 20px;  /* Same padding for grid */
   list-style: none;
 `;
 
@@ -46,7 +52,6 @@ export const ProductPrice = styled.p`
   margin: 10px 0; /* Keeps spacing consistent */
 `;
 
-
 export const ViewButton = styled.button`
   display: inline-block;
   margin-top: auto; /* Pushes the button to the bottom */
@@ -62,5 +67,41 @@ export const ViewButton = styled.button`
   &:hover {
     background-color: #333; /* Slightly lighter black on hover */
   }
+`;
+
+// Search input field with icon inside
+export const SearchWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px 0;
+`;
+
+export const SearchInput = styled.input`
+  padding: 10px 10px 10px 35px; /* Add space on left for the icon */
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s;
+  color: #444; /* Darker text */
+  
+  &::placeholder {
+    color: #555; /* Darker placeholder text */
+  }
+
+  &:focus {
+    border-color: #000;
+  }
+`;
+
+export const SearchIcon = styled(FaSearch)`
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the icon */
+  color: #444; /* Icon color */
 `;
 
