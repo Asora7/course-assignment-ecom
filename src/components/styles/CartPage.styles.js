@@ -1,47 +1,49 @@
-//components/styles/CartPage.styles.js
+// components/styles/CartPage.styles.js
 
 import styled from 'styled-components';
 import { FaTrash } from 'react-icons/fa';
 
-// Wrapper for the whole cart page
+// Wrapper for the whole cart page (matching CheckoutPage container size)
 export const CartPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 100vh; /* Ensures content is at the top but not pushed too far down */
-  padding: 2rem;
-  background-color: #f9f9f9; /* Light background color */
+  min-height: 300px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 2rem;
 `;
 
 // Title of the Cart Page
 export const CartPageTitle = styled.h1`
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem; /* Increased margin-bottom for better spacing */
   color: #333;
   text-align: center;
-  padding: 0 1rem;
 `;
 
-// Cart item card container
+// Cart item card container (matching CheckoutItemCard spacing)
 export const CartItemCard = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
   border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem;
+  margin-bottom: 1rem; /* Increased bottom margin for spacing */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 700px; /* Limits the width for a neat layout */
+  max-width: 500px;
 `;
 
 // Product Image
 export const ProductImage = styled.img`
-  width: 80px;
-  height: 80px;
+  width: 70px;  /* Reduced width to match CheckoutPage product image */
+  height: 70px;  /* Reduced height to match CheckoutPage product image */
   object-fit: cover;
   border-radius: 8px;
 `;
@@ -54,16 +56,16 @@ export const ProductDetails = styled.div`
 
 // Product name
 export const ProductTitle = styled.p`
-  font-size: 1.2rem;
+  font-size: 1rem;  /* Reduced font size to match CheckoutPage */
   font-weight: 600;
   color: #333;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;  /* Reduced margin-bottom */
 `;
 
 // Product price and quantity
 export const ProductPriceQuantity = styled.p`
-  font-size: 1rem;
-  color: #444;
+  font-size: 0.9rem;  /* Reduced font size to match CheckoutPage */
+  color: #666;
 `;
 
 // Remove button
@@ -85,36 +87,40 @@ export const RemoveButton = styled.button`
   }
 `;
 
-// Total Price Section
+// Total Price Section (matching CheckoutPage TotalPriceSection)
 export const TotalPriceSection = styled.div`
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
-  margin-top: 1rem; /* Adjust this margin to bring it closer under the last card */
-  margin-left: auto;
-  margin-right: auto;
   color: #333;
-  text-align: left;  /* Align total to the left */
-  width: 100%;  /* Full width but will be controlled by the max-width */
-  max-width: 700px;  /* Restrict it to the same max width as the product cards */
-  padding-left: 1rem;  /* Add some left padding to align with the content */
+  text-align: center;
+  width: 100%;
+  max-width: 300px;  /* Matches CheckoutPage total section */
+  padding: 1rem;  /* Increased padding for better readability */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto 1.5rem auto;  /* Centering the section horizontally with added top margin */
 `;
 
-// Proceed to checkout button
+// Proceed to checkout button (matching CheckoutButton)
 export const CheckoutButton = styled.button`
   background-color: #000;
   color: white;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
+  padding: 0.8rem 1.5rem;  /* Adjust the padding to make it more compact */
+  font-size: 1rem;
   font-weight: 600;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 1.5rem;
   transition: background-color 0.3s;
+  margin-top: 2rem;  /* Added space above the button */
+  width: 100%;
+  max-width: 500px;  /* Match the width of CartItemCard and TotalPriceSection */
+  align-self: center;  /* Align button to center */
+  margin: 2rem auto;  /* Center the button horizontally with top margin */
+  
   &:hover {
     background-color: #333;
   }
-  width: auto; /* Adjust width to auto */
-  max-width: 700px; /* Ensures it doesn't stretch too much */
-  align-self: center; /* Centers the button */
 `;
+
