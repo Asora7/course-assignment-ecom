@@ -15,6 +15,8 @@ export const CartPageContainer = styled.div`
   max-width: 500px;
   margin: 0 auto;
   margin-top: 2rem;
+  border: 1px solid #ddd;  // Adds a thin stroke with a light gray color
+  border-radius: 8px;  // Optional: Adds rounded corners for a smoother look
 `;
 
 // Title of the Cart Page
@@ -36,7 +38,6 @@ export const CartItemCard = styled.div`
   padding: 0.8rem;
   margin-bottom: 1rem; /* Increased bottom margin for spacing */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
   max-width: 500px;
 `;
 
@@ -93,13 +94,13 @@ export const TotalPriceSection = styled.div`
   font-weight: 700;
   color: #333;
   text-align: center;
-  width: 100%;
   max-width: 300px;  /* Matches CheckoutPage total section */
   padding: 1rem;  /* Increased padding for better readability */
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin: 2rem auto 1.5rem auto;  /* Centering the section horizontally with added top margin */
+  margin: 2rem 0 1.5rem 0;  /* Adjusted top/bottom margins to center section */
+  align-self: center;  /* Ensure it's centered within the container */
 `;
 
 // Proceed to checkout button (matching CheckoutButton)
@@ -113,14 +114,11 @@ export const CheckoutButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-top: 2rem;  /* Added space above the button */
   width: 100%;
   max-width: 500px;  /* Match the width of CartItemCard and TotalPriceSection */
-  align-self: center;  /* Align button to center */
   margin: 2rem auto;  /* Center the button horizontally with top margin */
   
   &:hover {
     background-color: #333;
   }
 `;
-
