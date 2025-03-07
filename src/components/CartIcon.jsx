@@ -17,12 +17,12 @@ const CartCount = styled.span`
   font-weight: bold;
   margin-left: 0.5rem;
   display: inline-block;
-  background-color: ${({ hasItems }) => (hasItems ? "red" : "white")};
-  color: ${({ hasItems }) => (hasItems ? "white" : "black")};
-  border: ${({ hasItems }) => (hasItems ? "none" : "1px solid black")};
+  background-color: ${({ $hasItems }) => ($hasItems ? "red" : "white")};
+  color: ${({ $hasItems }) => ($hasItems ? "white" : "black")};
+  border: ${({ $hasItems }) => ($hasItems ? "none" : "1px solid black")};
   
-  ${({ animate }) =>
-    animate &&
+  ${({ $animate }) =>
+    $animate &&
     css`
       animation: ${bounce} 0.5s ease;
     `}
@@ -36,7 +36,7 @@ function CartIcon() {
             <CartLink to="/cart">
                 <FaShoppingCart style={{ marginRight: '0.5rem' }} />
                 <span>Cart</span>
-                <CartCount hasItems={cart.length > 0} animate={recentlyAdded}>
+                <CartCount $hasItems={cart.length > 0} $animate={recentlyAdded}>
                     {cart.length}
                 </CartCount>
             </CartLink>
