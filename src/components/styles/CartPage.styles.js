@@ -1,7 +1,6 @@
 // components/styles/CartPage.styles.js
 
 import styled from 'styled-components';
-import { FaTrash } from 'react-icons/fa';
 
 // Wrapper for the whole cart page (matching CheckoutPage container size)
 export const CartPageContainer = styled.div`
