@@ -1,6 +1,6 @@
 // src/components/styles/Header.styles.js
 import styled from 'styled-components';
-import { NavLink as RouterNavLink } from 'react-router-dom';  // Import NavLink here
+import { NavLink as RouterNavLink } from 'react-router-dom';  
 
 export const Navbar = styled.nav`
   display: flex;
@@ -32,13 +32,23 @@ export const StyledNavLink = styled(RouterNavLink)`
   }
 `;
 
-export const Logo = styled.h1`
+export const Logo = styled(RouterNavLink)`
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   font-weight: bold;
   color: white;
   margin: 0;
+  text-decoration: none;  // Removes underline even when active
+
+  &:hover {
+    text-decoration: none;  // Optional to make sure hover doesn't add underline
+  }
+
+  &.active {
+    text-decoration: none;  // Even if it's the active link, no underline
+  }
 `;
+
 
 export const HeaderWrapper = styled.header`
   background-color: black;

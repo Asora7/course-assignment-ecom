@@ -1,5 +1,5 @@
 // components/Header.jsx
-import { NavLink } from 'react-router-dom';  // Import NavLink instead of Link
+import { NavLink } from 'react-router-dom';  // Correct import
 import CartIcon from './CartIcon';
 import { Navbar, Logo, HeaderWrapper, NavContainer, NavLinks } from './styles/Header.styles';
 
@@ -7,11 +7,25 @@ function Header() {
   return (
     <HeaderWrapper>
       <Navbar>
-        <Logo>Urban Nest</Logo>
+        {/* Make the Logo clickable to go home */}
+        <Logo as={NavLink} to="/">Urban Nest</Logo>
+
         <NavContainer>
           <NavLinks>
-            <NavLink to="/" activeClassName="active">Home</NavLink>
-            <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+            {/* Correct usage of NavLink with active state handling */}
+            <NavLink 
+              to="/" 
+              className={({ isActive }) => isActive ? 'active' : ''}
+            >
+              Home
+            </NavLink>
+
+            <NavLink 
+              to="/contact" 
+              className={({ isActive }) => isActive ? 'active' : ''}
+            >
+              Contact
+            </NavLink>
           </NavLinks>
           <CartIcon />
         </NavContainer>
