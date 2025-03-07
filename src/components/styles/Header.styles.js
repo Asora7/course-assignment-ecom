@@ -1,6 +1,6 @@
 // src/components/styles/Header.styles.js
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'; // Import Link here
+import { NavLink as RouterNavLink } from 'react-router-dom';  // Import NavLink here
 
 export const Navbar = styled.nav`
   display: flex;
@@ -14,6 +14,22 @@ export const Navbar = styled.nav`
   left: 0; /* Aligns it to the left */
   right: 0; /* Aligns it to the right */
   z-index: 1000; /* Ensures the header is above other content */
+`;
+
+export const StyledNavLink = styled(RouterNavLink)`
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+
+  &.active {
+    text-decoration: underline;  // Add underline when active
+    // Removed font-size change for active state
+  }
+
+  &:hover {
+    font-size: 1.1rem;  // Optional slight hover size bump
+  }
 `;
 
 export const Logo = styled.h1`
@@ -39,7 +55,7 @@ export const NavContainer = styled.div`
 export const NavLinks = styled.div`
   display: flex;
   gap: 1.5rem;
-  
+
   a {
     color: white;
     text-decoration: none;
@@ -50,9 +66,14 @@ export const NavLinks = styled.div`
       text-decoration: underline;
     }
   }
+
+  .active {
+    text-decoration: underline;  // Underline for active link
+    // No font-size change
+  }
 `;
 
-export const CartLink = styled(Link)`  // Use Link here
+export const CartLink = styled(RouterNavLink)`  // Use Link here
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -63,4 +84,3 @@ export const CartLink = styled(Link)`  // Use Link here
     text-decoration: underline;
   }
 `;
-

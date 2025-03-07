@@ -1,7 +1,7 @@
 // components/Header.jsx
-import { Link } from "react-router-dom";
-import CartIcon from "./CartIcon";
-import { Navbar, Logo, HeaderWrapper, NavContainer, NavLinks } from "./styles/Header.styles";
+import { NavLink } from 'react-router-dom';  // Import NavLink instead of Link
+import CartIcon from './CartIcon';
+import { Navbar, Logo, HeaderWrapper, NavContainer, NavLinks } from './styles/Header.styles';
 
 function Header() {
   return (
@@ -10,8 +10,8 @@ function Header() {
         <Logo>Urban Nest</Logo>
         <NavContainer>
           <NavLinks>
-            <Link to="/">Home</Link>
-            <Link to="/contact">Contact</Link>
+            <NavLink to="/" activeClassName="active">Home</NavLink>
+            <NavLink to="/contact" activeClassName="active">Contact</NavLink>
           </NavLinks>
           <CartIcon />
         </NavContainer>
