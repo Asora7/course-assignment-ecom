@@ -22,8 +22,10 @@ function CheckoutPage() {
   const total = cart.reduce((total, item) => total + item.discountedPrice * item.quantity, 0);
 
   function handleCheckout() {
-    // Clear the cart and navigate to checkout success
-    navigate("/checkout-success");
+    const confirmCheckout = window.confirm("Are you sure you want to place this order?");
+    if (confirmCheckout) {
+      navigate("/checkout-success");
+    }
   }
 
   return (
@@ -50,8 +52,9 @@ function CheckoutPage() {
           Total: ${total.toFixed(2)}
         </TotalPriceSection>
         <CheckoutButton onClick={handleCheckout}>
-          Checkout
-        </CheckoutButton>
+            Checkout
+            </CheckoutButton>
+
       </CheckoutPageContainer>
     </Layout>
   );
