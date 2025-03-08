@@ -8,7 +8,7 @@ export const SuccessTitle = styled.h1`
   font-weight: 700;
   color: #4CAF50;  // Green color for success
   text-align: center;
-  margin-top: 5rem;  // Reduced margin-top for positioning the title closer to the top
+  margin-top: 8rem;  // Reduced margin-top for positioning the title closer to the top
   margin-bottom: 1rem;
 `;
 

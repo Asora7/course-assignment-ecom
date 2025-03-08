@@ -13,7 +13,9 @@ export const CheckoutPageContainer = styled.div`
   background-color: #f9f9f9;
   max-width: 500px;  // Reduced max-width of the overall container
   margin: 0 auto;  // Centered the container horizontally
-  margin-top: 2rem;  // Added a bit of space from the top
+  margin-top: 6rem;  // Added a bit of space from the top
+  border: 1px solid #ddd;  // Adds a thin stroke with a light gray color
+  border-radius: 8px;  // Optional: Adds rounded corners for a smoother look
 `;
 
 // Checkout page title (small margin)

@@ -13,7 +13,7 @@ export const CartPageContainer = styled.div`
   background-color: #f9f9f9;
   max-width: 500px;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 6rem;
   border: 1px solid #ddd;  // Adds a thin stroke with a light gray color
   border-radius: 8px;  // Optional: Adds rounded corners for a smoother look
 `;
