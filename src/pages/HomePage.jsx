@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import { fetchProducts } from "../data/api";
-import { Link } from "react-router-dom";
 import * as S from "../components/styles/HomePage.styles"; // Import styled components
+import Product from "../components/Product";
 
 function HomePage() {
   const [products, setProducts] = useState([]);
@@ -43,17 +43,7 @@ function HomePage() {
 
         <S.ProductGrid>
           {filteredProducts.map((product) => (
-            <S.ProductCard key={product.id}>
-              <S.ProductImage 
-                src={product.image?.url} 
-                alt={product.image?.alt || product.title} 
-              />
-              <S.ProductTitle>{product.title}</S.ProductTitle>
-              <S.ProductPrice>${product.discountedPrice}</S.ProductPrice>
-              <Link to={`/product/${product.id}`}>
-                <S.ViewButton>View Product</S.ViewButton>
-              </Link>
-            </S.ProductCard>
+            <Product key={product.id} product={product} />
           ))}
         </S.ProductGrid>
       </S.PageContainer>

@@ -1,54 +1,22 @@
 // src/components/styles/Header.styles.js
+// src/components/styles/Header.styles.js
 import styled from 'styled-components';
-import { NavLink as RouterNavLink } from 'react-router-dom';  
+import { NavLink as RouterNavLink } from 'react-router-dom';
 
 export const Navbar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
   padding: 1.5rem 2rem;
   background-color: black;
   color: white;
-  position: fixed; /* This makes it fixed */
-  top: 0; /* Keeps it at the top */
-  left: 0; /* Aligns it to the left */
-  right: 0; /* Aligns it to the right */
-  z-index: 1000; /* Ensures the header is above other content */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 `;
-
-export const StyledNavLink = styled(RouterNavLink)`
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-
-  &.active {
-    text-decoration: underline;  // Add underline when active
-    // Removed font-size change for active state
-  }
-
-  &:hover {
-    font-size: 1.1rem;  // Optional slight hover size bump
-  }
-`;
-
-export const Logo = styled(RouterNavLink)`
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  margin: 0;
-  text-decoration: none;  // Removes underline even when active
-
-  &:hover {
-    text-decoration: none;  // Optional to make sure hover doesn't add underline
-  }
-
-  &.active {
-    text-decoration: none;  // Even if it's the active link, no underline
-  }
-`;
-
 
 export const HeaderWrapper = styled.header`
   background-color: black;
@@ -56,15 +24,30 @@ export const HeaderWrapper = styled.header`
   margin-bottom: 2rem;
 `;
 
+export const Logo = styled(RouterNavLink)`
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 4vw, 2rem); /* Adjust size dynamically */
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap; /* Prevents breaking into two lines */
+
+  &:hover {
+    text-decoration: none;
+  }
+`;
+
 export const NavContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap; /* Ensures proper wrapping on small screens */
 `;
 
 export const NavLinks = styled.div`
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap; /* Ensures links wrap if needed */
 
   a {
     color: white;
@@ -76,14 +59,9 @@ export const NavLinks = styled.div`
       text-decoration: underline;
     }
   }
-
-  .active {
-    text-decoration: underline;  // Underline for active link
-    // No font-size change
-  }
 `;
 
-export const CartLink = styled(RouterNavLink)`  // Use Link here
+export const CartLink = styled(RouterNavLink)`
   color: white;
   text-decoration: none;
   font-weight: bold;
