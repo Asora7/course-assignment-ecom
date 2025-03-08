@@ -13,6 +13,8 @@ import {
   ProductPriceQuantity,
   TotalPriceSection,
   CheckoutButton,
+  EmptyCartMessage,
+  GoBackButton, // Added GoBackButton
 } from "../components/styles/CheckoutPage.styles";
 
 function CheckoutPage() {
@@ -20,6 +22,19 @@ function CheckoutPage() {
   const navigate = useNavigate();
 
   const total = cart.reduce((total, item) => total + item.discountedPrice * item.quantity, 0);
+  const isCartEmpty = cart.length === 0; // Check if cart is empty
+
+  if (isCartEmpty) {
+    // Redirect user back to the homepage if cart is empty
+    return (
+      <Layout>
+        <CheckoutPageContainer>
+          <EmptyCartMessage>Your cart is empty. Add items to proceed to checkout.</EmptyCartMessage>
+          <GoBackButton onClick={() => navigate("/")}>Continue shopping</GoBackButton>
+        </CheckoutPageContainer>
+      </Layout>
+    );
+  }
 
   function handleCheckout() {
     const confirmCheckout = window.confirm("Are you sure you want to place this order?");
@@ -52,9 +67,8 @@ function CheckoutPage() {
           Total: ${total.toFixed(2)}
         </TotalPriceSection>
         <CheckoutButton onClick={handleCheckout}>
-            Checkout
-            </CheckoutButton>
-
+          Checkout
+        </CheckoutButton>
       </CheckoutPageContainer>
     </Layout>
   );

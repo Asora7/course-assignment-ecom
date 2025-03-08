@@ -67,17 +67,18 @@ export const AddToCartButton = styled.button`
 
 export const ContinueShoppingButton = styled.button`
   padding: 12px 25px;
-  background-color: #555; /* Dark grey color */
-  color: #fff;
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
   font-size: 1rem;
-  border: none;
+  border: 2px solid #000; /* Black border */
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 20px; /* Add some space from other elements */
+  transition: background-color 0.3s, border-color 0.3s;
+  margin-top: 20px;
 
   &:hover {
-    background-color: #444; /* Slightly lighter grey on hover */
+    background-color: #e0e0e0; /* Light grey background on hover */
+    border-color: #444; /* Slightly darker border on hover */
   }
 `;
 

@@ -111,3 +111,30 @@ export const CheckoutButton = styled.button`
     background-color: #218838;
   }
 `;
+
+export const EmptyCartMessage = styled.p`
+  font-size: 1.2rem;
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+`;
+
+export const GoBackButton = styled.button`
+  background-color: #000;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 500px;  // Matches the width of the total section
+  align-self: center;
+
+  &:hover {
+    background-color: #333;
+  }
+`;
