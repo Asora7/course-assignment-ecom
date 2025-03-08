@@ -63,7 +63,6 @@ export const ViewButton = styled.button`
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 0.9rem;
   
   /* Make text bigger on smaller screens */
   @media (max-width: 600px) {
