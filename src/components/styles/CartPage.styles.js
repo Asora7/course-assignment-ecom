@@ -68,6 +68,15 @@ export const ProductPriceQuantity = styled.p`
   color: #666;
 `;
 
+export const QuantityInput = styled.input`
+  width: 50px;
+  padding: 5px;
+  margin-left: 10px;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+`;
+
 // Remove button
 export const RemoveButton = styled.button`
   background-color: transparent;
