@@ -93,7 +93,7 @@ export const TotalPriceSection = styled.div`
 
 // Checkout button - More compact
 export const CheckoutButton = styled.button`
-  background-color: #000;
+  background-color: #28a745;
   color: white;
   padding: 0.8rem 1.5rem;  // Slightly smaller padding
   font-size: 1rem;
@@ -108,6 +108,6 @@ export const CheckoutButton = styled.button`
   align-self: center;
 
   &:hover {
-    background-color: #333;
+    background-color: #218838;
   }
 `;
