@@ -26,6 +26,11 @@ function ContactPage() {
     function handleChange(e) {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
+
+        // Hide success message when the user starts typing
+        if (submitted) {
+            setSubmitted(false);
+        }
     }
 
     function validateForm() {
@@ -41,8 +46,20 @@ function ContactPage() {
         e.preventDefault();
         const validationErrors = validateForm();
         if (Object.keys(validationErrors).length === 0) {
+            // Form is valid, submit the form data
             setSubmitted(true);
             console.log(formData); // Replace with actual submission logic if needed
+            
+            // Reset form fields after submission
+            setFormData({
+                fullName: "",
+                subject: "",
+                email: "",
+                body: "",
+            });
+
+            // Clear any previous error messages
+            setErrors({});
         } else {
             setErrors(validationErrors);
         }
