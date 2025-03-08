@@ -65,6 +65,22 @@ export const AddToCartButton = styled.button`
   }
 `;
 
+export const ContinueShoppingButton = styled.button`
+  padding: 12px 25px;
+  background-color: #555; /* Dark grey color */
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px; /* Add some space from other elements */
+
+  &:hover {
+    background-color: #444; /* Slightly lighter grey on hover */
+  }
+`;
+
 export const ReviewsSection = styled.div`
   margin-top: 30px;
   width: 100%;
