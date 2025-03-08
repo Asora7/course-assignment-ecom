@@ -54,20 +54,27 @@ export const ProductPrice = styled.p`
 
 export const ViewButton = styled.button`
   display: inline-block;
-  margin-top: auto; /* Pushes the button to the bottom */
+  margin-top: auto;
   padding: 10px 20px;
-  background-color: #000; /* Black button */
-  color: #fff; /* White text */
+  background-color: #000;
+  color: #fff;
   text-decoration: none;
   border-radius: 4px;
-  border: none; /* Remove default button border */
+  border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+  
+  /* Make text bigger on smaller screens */
+  @media (max-width: 600px) {
+    font-size: 0.8rem;  /* Increase text size for smaller screens */
+  }
 
   &:hover {
-    background-color: #333; /* Slightly lighter black on hover */
+    background-color: #333;
   }
 `;
+
 
 // Search input field with icon inside
 export const SearchWrapper = styled.div`
