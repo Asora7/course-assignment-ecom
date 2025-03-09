@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a simple eCommerce store built with React. The store fetches product data from an external API and displays it in a structured layout. It includes features like a search bar, product details page, cart management, checkout page, and a contact form. This project demonstrates how to integrate React with APIs and manage state effectively in a real-world eCommerce application.
+This project is a simple eCommerce store built with React. The store fetches product data from an external API and displays it in a structured layout. It includes features like a search bar, product details page, cart management, checkout page, and a contact form. 
 
 ## Goal
 
