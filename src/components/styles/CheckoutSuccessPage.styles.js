@@ -1,8 +1,5 @@
-// components/styles/CheckoutSuccessPage.styles.js
-
 import styled from 'styled-components';
 
-// Success title (Order successful)
 export const SuccessTitle = styled.h1`
   font-size: 2rem;
   font-weight: 700;
@@ -12,7 +9,6 @@ export const SuccessTitle = styled.h1`
   margin-bottom: 1rem;
 `;
 
-// Thanks for shopping message
 export const ThankYouMessage = styled.p`
   font-size: 1.2rem;
   color: #333;
@@ -20,7 +16,6 @@ export const ThankYouMessage = styled.p`
   margin-bottom: 2rem;  // Added space between the text and button
 `;
 
-// Button to go back to the store
 export const BackToStoreButton = styled.button`
   background-color: #000;
   color: white;

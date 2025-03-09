@@ -1,5 +1,3 @@
-//App.jsx
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
@@ -7,12 +5,12 @@ import CartPage from "./pages/CartPage";
 import ProductPage from "./pages/ProductPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import CheckoutSuccessPage from "./pages/CheckoutSuccessPage";
-import GlobalStyles from './components/styles/Global.styles'; // Import the GlobalStyles component
+import GlobalStyles from './components/styles/Global.styles'; 
 
 function App() {
   return (
     <>
-      <GlobalStyles /> {/* Apply Global Styles */}
+      <GlobalStyles /> 
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />

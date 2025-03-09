@@ -1,8 +1,5 @@
-// components/styles/CartPage.styles.js
-
 import styled from 'styled-components';
 
-// Wrapper for the whole cart page (matching CheckoutPage container size)
 export const CartPageContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,7 +19,6 @@ export const CartPageContainer = styled.div`
     }
 `;
 
-// Title of the Cart Page
 export const CartPageTitle = styled.h1`
   font-size: 1.8rem;
   font-weight: 600;
@@ -31,7 +27,6 @@ export const CartPageTitle = styled.h1`
   text-align: center;
 `;
 
-// Cart item card container (matching CheckoutItemCard spacing)
 export const CartItemCard = styled.div`
   display: flex;
   justify-content: space-between;
@@ -44,7 +39,6 @@ export const CartItemCard = styled.div`
   max-width: 500px;
 `;
 
-// Product Image
 export const ProductImage = styled.img`
   width: 70px;  /* Reduced width to match CheckoutPage product image */
   height: 70px;  /* Reduced height to match CheckoutPage product image */
@@ -52,13 +46,11 @@ export const ProductImage = styled.img`
   border-radius: 8px;
 `;
 
-// Product details container (Name, Price, Quantity)
 export const ProductDetails = styled.div`
   flex-grow: 1;
   margin-left: 1rem;
 `;
 
-// Product name
 export const ProductTitle = styled.p`
   font-size: 1rem;  /* Reduced font size to match CheckoutPage */
   font-weight: 600;
@@ -66,7 +58,6 @@ export const ProductTitle = styled.p`
   margin-bottom: 0.3rem;  /* Reduced margin-bottom */
 `;
 
-// Product price and quantity
 export const ProductPriceQuantity = styled.p`
   font-size: 0.9rem;  /* Reduced font size to match CheckoutPage */
   color: #666;
@@ -81,7 +72,6 @@ export const QuantityInput = styled.input`
   border: 1px solid #ccc;
 `;
 
-// Remove button
 export const RemoveButton = styled.button`
   background-color: transparent;
   border: none;
@@ -100,7 +90,6 @@ export const RemoveButton = styled.button`
   }
 `;
 
-// Total Price Section (matching CheckoutPage TotalPriceSection)
 export const TotalPriceSection = styled.div`
   font-size: 1rem;
   font-weight: 700;
@@ -115,7 +104,6 @@ export const TotalPriceSection = styled.div`
   align-self: center;  /* Ensure it's centered within the container */
 `;
 
-// Proceed to checkout button (matching CheckoutButton)
 export const CheckoutButton = styled.button`
   background-color: #000;
   color: white;

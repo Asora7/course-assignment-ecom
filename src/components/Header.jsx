@@ -1,5 +1,4 @@
-// components/Header.jsx
-import { NavLink } from 'react-router-dom';  // Correct import
+import { NavLink } from 'react-router-dom';  
 import CartIcon from './CartIcon';
 import { Navbar, Logo, HeaderWrapper, NavContainer, NavLinks } from './styles/Header.styles';
 
@@ -7,12 +6,10 @@ function Header() {
   return (
     <HeaderWrapper>
       <Navbar>
-        {/* Make the Logo clickable to go home */}
         <Logo as={NavLink} to="/">Urban Nest</Logo>
 
         <NavContainer>
           <NavLinks>
-            {/* Correct usage of NavLink with active state handling */}
             <NavLink 
               to="/" 
               className={({ isActive }) => isActive ? 'active' : ''}

@@ -1,4 +1,3 @@
-// src/components/styles/Header.styles.js
 import styled from 'styled-components';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 

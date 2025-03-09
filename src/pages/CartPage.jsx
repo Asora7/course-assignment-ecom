@@ -1,8 +1,7 @@
-// pages/CartPage.jsx
-import ProductCart from "../components/ProductCart"; // Use ProductCart for displaying cart items
-import Layout from "../components/Layout"; // Import Layout
+import ProductCart from "../components/ProductCart"; 
+import Layout from "../components/Layout"; 
 import { useNavigate } from "react-router-dom";
-import { useCart } from "../context/CartContext"; // Import context hook to get cart and update functions
+import { useCart } from "../context/CartContext"; 
 import {
   CartPageContainer,
   CartPageTitle,
@@ -10,11 +9,10 @@ import {
 } from "../components/styles/CartPage.styles";
 
 function CartPage() {
-  const { cart } = useCart(); // Get cart items from context
+  const { cart } = useCart(); 
   const navigate = useNavigate();
 
   const getCartItemCount = () => {
-    // Calculate the total number of items (sum of all quantities)
     return cart.reduce((total, item) => total + item.quantity, 0);
   };
 
@@ -22,7 +20,7 @@ function CartPage() {
     <Layout>
       <CartPageContainer>
         <CartPageTitle>Your Cart ({getCartItemCount()})</CartPageTitle>
-        <ProductCart /> {/* Display cart items */}
+        <ProductCart /> 
         <CheckoutButton onClick={() => navigate("/checkout")}>
           Proceed to Checkout
         </CheckoutButton>

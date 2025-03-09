@@ -1,4 +1,3 @@
-// components/styles/ContactPage.styles.js
 import styled from "styled-components";
 
 export const ContactWrapper = styled.section`

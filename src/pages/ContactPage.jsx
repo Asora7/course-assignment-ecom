@@ -1,4 +1,3 @@
-// pages/ContactPage.jsx
 import { useState } from "react";
 import Layout from "../components/Layout";
 import {
@@ -27,7 +26,6 @@ function ContactPage() {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
 
-        // Hide success message when the user starts typing
         if (submitted) {
             setSubmitted(false);
         }
@@ -46,11 +44,9 @@ function ContactPage() {
         e.preventDefault();
         const validationErrors = validateForm();
         if (Object.keys(validationErrors).length === 0) {
-            // Form is valid, submit the form data
             setSubmitted(true);
-            console.log(formData); // Replace with actual submission logic if needed
-            
-            // Reset form fields after submission
+            console.log(formData); 
+ 
             setFormData({
                 fullName: "",
                 subject: "",
@@ -58,7 +54,6 @@ function ContactPage() {
                 body: "",
             });
 
-            // Clear any previous error messages
             setErrors({});
         } else {
             setErrors(validationErrors);

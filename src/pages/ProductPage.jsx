@@ -1,15 +1,13 @@
-//pages/ProductPage.jsx
-
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchProductById } from "../data/api";
 import { useCart } from "../context/CartContext";
 import Layout from "../components/Layout";
-import * as S from '../components/styles/ProductPage.styles'; // Import styles
+import * as S from '../components/styles/ProductPage.styles'; 
 
 function ProductPage() {
     const { id } = useParams();
-    const navigate = useNavigate(); // Initialize useNavigate
+    const navigate = useNavigate(); 
     const [product, setProduct] = useState(null);
     const { addToCart } = useCart();
 
@@ -44,7 +42,6 @@ function ProductPage() {
                     Add to Cart
                 </S.AddToCartButton>
 
-                {/* Continue Shopping Button */}
                 <S.ContinueShoppingButton onClick={() => navigate('/')}>
                     Continue Shopping
                 </S.ContinueShoppingButton>

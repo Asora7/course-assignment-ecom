@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Course Assignment - eCommerce Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+This project is a simple eCommerce store built with React. The store fetches product data from an external API and displays it in a structured layout. It includes features like a search bar, product details page, cart management, checkout page, and a contact form. 
 
-In the project directory, you can run:
+## Goal
 
-### `npm start`
+To apply knowledge of React to build an eCommerce store, allowing users to browse products, add them to the cart, and proceed through checkout.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Brief
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The API used for this project is the [Noroff API](https://v2.api.noroff.dev/online-shop).
 
-### `npm test`
+### Pages:
+- **Homepage**: Displays a list of all products with a look-ahead search bar to filter products by name.
+- **Product Page**: Displays details of a single product, including title, description, image, price (with discount if applicable), and reviews.
+- **Cart Page**: Displays items in the cart and the total price, able to remove item or change quantity
+- **Checkout Page**: Display items in cart, total and checkout button with confirmation.
+- **Checkout Success Page**: Notifies users of successful checkout and provides an option to return to the homepage.
+- **Contact Page**: Contains a contact form with validation.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Features:
+- **Search Bar**: Filters products by title.
+- **Add to Cart**: Adds items to the cart and displays the total on the Cart Page.
+- **Checkout**: Clears the cart after a successful checkout and shows a success message.
+- **Form Validation**: Ensures the contact form is properly filled out before submission.
+- **Change Quantity in Cart**: Functionality to change the quantity of items in the cart.
+- **Checkout Confirmation**: After a successful checkout, a confirmation message is shown and provide an option to return to the homepage.
+- **Remove Items from Cart**: Users can remove item from cart.
+- **Product Price with Discount**: Product pages show discounts if there are any.
+- **Clear Contact Form After Submission**: Resets the contact form after a successful submission, allowing users to easily submit another inquiry.
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run this project locally, follow the steps below.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
+Ensure you have the following installed on your machine:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Node.js](https://nodejs.org/en/) (including npm)
 
-### `npm run eject`
+### Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Follow these steps to clone and run the project locally:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the Repository**  
+   Clone this repository to your local machine using the following command:
+   ```bash
+   git clone https://github.com/Asora7/course-assignment-ecom.git
+2. **Navigate to the Project Directory**
+   After cloning the repository, navigate to the project folder:
+   ```bash
+   cd course-assignment-ecom
+3. **Install Dependencies**
+   This will install all the necessary libraries and packages listed in package.json. Install the required dependencies by running the following command: 
+   ```bash
+   npm install
+4. **Run the Project Locally**
+   Once the dependencies are installed, you can start the development server:
+   ```bash
+   npm start
+This will run the app locally and you can view it in your browser by navigating to http://localhost:3000.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Dependencies
+This project uses the following dependencies:
+- **react**: The core library for building the user interface.
+- **react-router-dom**: For routing between pages.
+- **styled-components**: For styled components (CSS-in-JS).
+- **react-icons**: For using icons throughout the app.
+- **react-scripts**: For running and building the React app.
+- **web-vitals**: For measuring web performance.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Run script
+- **npm start**:  Runs the app in development mode. Open http://localhost:3000 to view it in the browser.
 
-## Learn More
+### Github Repository URL
+[Github Repository](https://github.com/Asora7/course-assignment-ecom)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Live Site URL
+[Live site](https://urbannestecom.netlify.app)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   

@@ -1,4 +1,3 @@
-// pages/CheckoutPage.jsx
 import { useCart } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
@@ -14,7 +13,7 @@ import {
   TotalPriceSection,
   CheckoutButton,
   EmptyCartMessage,
-  GoBackButton, // Added GoBackButton
+  GoBackButton, 
 } from "../components/styles/CheckoutPage.styles";
 
 function CheckoutPage() {
@@ -22,10 +21,9 @@ function CheckoutPage() {
   const navigate = useNavigate();
 
   const total = cart.reduce((total, item) => total + item.discountedPrice * item.quantity, 0);
-  const isCartEmpty = cart.length === 0; // Check if cart is empty
+  const isCartEmpty = cart.length === 0; 
 
   if (isCartEmpty) {
-    // Redirect user back to the homepage if cart is empty
     return (
       <Layout>
         <CheckoutPageContainer>

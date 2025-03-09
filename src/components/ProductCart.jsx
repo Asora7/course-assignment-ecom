@@ -1,6 +1,5 @@
-// components/ProductCart.jsx
 import { useCart } from "../context/CartContext";
-import { FaTrash } from 'react-icons/fa'; // Import Trash icon
+import { FaTrash } from 'react-icons/fa'; 
 import {
   CartItemCard,
   ProductImage,
@@ -9,15 +8,15 @@ import {
   ProductPriceQuantity,
   RemoveButton,
   TotalPriceSection,
-  QuantityInput, // Assuming this is styled in your styles
+  QuantityInput, 
 } from "../components/styles/CartPage.styles";
 
 function ProductCart() {
   const { cart, removeFromCart, updateQuantity } = useCart();
 
   const handleQuantityChange = (id, newQuantity) => {
-    if (newQuantity >= 1) { // Ensure the quantity is valid (1 or more)
-      updateQuantity(id, newQuantity); // Call updateQuantity function passed from context
+    if (newQuantity >= 1) { 
+      updateQuantity(id, newQuantity); 
     }
   };
 
@@ -42,7 +41,7 @@ function ProductCart() {
             </ProductPriceQuantity>
           </ProductDetails>
           <RemoveButton onClick={() => removeFromCart(item.id)}>
-            <FaTrash /> {/* Show the trash icon */}
+            <FaTrash /> 
           </RemoveButton>
         </CartItemCard>
       ))}

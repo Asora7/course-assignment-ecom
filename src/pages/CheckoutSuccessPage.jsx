@@ -1,18 +1,15 @@
-// pages/CheckoutSuccessPage.jsx
-
 import React, { useEffect } from "react";
 import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
-import Layout from "../components/Layout"; // Import Layout
-import { SuccessTitle, ThankYouMessage, BackToStoreButton } from "../components/styles/CheckoutSuccessPage.styles"; // Import styled components
+import Layout from "../components/Layout"; 
+import { SuccessTitle, ThankYouMessage, BackToStoreButton } from "../components/styles/CheckoutSuccessPage.styles"; 
 
 function CheckoutSuccessPage() {
     const { clearCart } = useCart();
 
-    // Clear the cart on checkout success, only run once when the page is loaded
     useEffect(() => {
         clearCart();
-    }, [clearCart]);  // Add clearCart to the dependency array
+    }, [clearCart]);  
 
     return (
         <Layout>

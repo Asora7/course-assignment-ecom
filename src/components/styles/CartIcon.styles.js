@@ -1,7 +1,5 @@
-//components/styles/CartIcon.styles.js
 import styled, { keyframes, css } from 'styled-components';
 
-// Bounce animation
 const bounce = keyframes`
   0% { transform: scale(1); }
   50% { transform: scale(1.3); }

@@ -1,5 +1,3 @@
-// components/Layout.jsx
-
 import Header from "./Header";
 import Footer from "./Footer";
 import styled from 'styled-components';

@@ -1,7 +1,5 @@
-// src/components/styles/HomePage.styles.js
-
 import styled from 'styled-components';
-import { FaSearch } from 'react-icons/fa'; // Import search icon
+import { FaSearch } from 'react-icons/fa'; 
 
 export const PageContainer = styled.div`
   padding: 0 20px;  /* Add padding on left and right to align with grid */
@@ -76,8 +74,6 @@ export const ViewButton = styled.button`
   }
 `;
 
-
-// Search input field with icon inside
 export const SearchWrapper = styled.div`
   position: relative;
   width: 100%;

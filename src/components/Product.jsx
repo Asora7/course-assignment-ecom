@@ -1,4 +1,3 @@
-// components/Product.jsx
 import { Link } from "react-router-dom";
 import * as S from "./styles/HomePage.styles"; 
 
