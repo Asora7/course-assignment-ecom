@@ -79,7 +79,3 @@ This project uses the following dependencies:
 
 ### Live Site URL
 [Live site](https://urbannestecom.netlify.app)
-
-
-
-   
