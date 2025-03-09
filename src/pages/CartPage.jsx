@@ -1,15 +1,15 @@
-import ProductCart from "../components/ProductCart"; 
-import Layout from "../components/Layout"; 
-import { useNavigate } from "react-router-dom";
-import { useCart } from "../context/CartContext"; 
+import ProductCart from '../components/ProductCart';
+import Layout from '../components/Layout';
+import { useNavigate } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
 import {
   CartPageContainer,
   CartPageTitle,
   CheckoutButton,
-} from "../components/styles/CartPage.styles";
+} from '../components/styles/CartPage.styles';
 
 function CartPage() {
-  const { cart } = useCart(); 
+  const { cart } = useCart();
   const navigate = useNavigate();
 
   const getCartItemCount = () => {
@@ -20,8 +20,8 @@ function CartPage() {
     <Layout>
       <CartPageContainer>
         <CartPageTitle>Your Cart ({getCartItemCount()})</CartPageTitle>
-        <ProductCart /> 
-        <CheckoutButton onClick={() => navigate("/checkout")}>
+        <ProductCart />
+        <CheckoutButton onClick={() => navigate('/checkout')}>
           Proceed to Checkout
         </CheckoutButton>
       </CartPageContainer>

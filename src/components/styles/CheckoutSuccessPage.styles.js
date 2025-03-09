@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const SuccessTitle = styled.h1`
   font-size: 2rem;
   font-weight: 700;
-  color: #4CAF50;  // Green color for success
+  color: #4caf50; // Green color for success
   text-align: center;
-  margin-top: 8rem;  // Reduced margin-top for positioning the title closer to the top
+  margin-top: 8rem; // Reduced margin-top for positioning the title closer to the top
   margin-bottom: 1rem;
 `;
 
@@ -13,7 +13,7 @@ export const ThankYouMessage = styled.p`
   font-size: 1.2rem;
   color: #333;
   text-align: center;
-  margin-bottom: 2rem;  // Added space between the text and button
+  margin-bottom: 2rem; // Added space between the text and button
 `;
 
 export const BackToStoreButton = styled.button`
@@ -27,7 +27,7 @@ export const BackToStoreButton = styled.button`
   cursor: pointer;
   transition: background-color 0.3s;
   width: 100%;
-  max-width: 300px;  // Ensuring button isn't too wide
+  max-width: 300px; // Ensuring button isn't too wide
   text-align: center;
   margin-top: 2rem;
 

@@ -15,7 +15,7 @@ export const ProductTitle = styled.h1`
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #333;  // Slightly softer than pure black
+  color: #333; // Slightly softer than pure black
 `;
 
 export const ProductImage = styled.img`
@@ -31,7 +31,7 @@ export const ProductDescription = styled.p`
   font-family: 'Arial', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  color: #444;  // Slightly darker than default grey, but not pure black
+  color: #444; // Slightly darker than default grey, but not pure black
   margin-bottom: 1.5rem;
 `;
 
@@ -44,7 +44,7 @@ export const ProductPrice = styled.p`
 
 export const DiscountText = styled.span`
   font-size: 1rem;
-  color: #d9534f;  /* red */
+  color: #d9534f; /* red */
   margin-left: 10px;
   font-weight: normal;
 `;
@@ -72,7 +72,9 @@ export const ContinueShoppingButton = styled.button`
   border: 2px solid #000; /* Black border */
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, border-color 0.3s;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
   margin-top: 20px;
 
   &:hover {
@@ -110,4 +112,3 @@ export const ReviewItem = styled.li`
     font-weight: bold;
   }
 `;
-

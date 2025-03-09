@@ -3,9 +3,9 @@ import { NavLink as RouterNavLink } from 'react-router-dom';
 
 export const Navbar = styled.nav`
   display: flex;
-  flex-direction: column;  /* Stack logo and nav elements vertically on smaller screens */
-  justify-content: center;  /* Center all elements */
-  align-items: center;  /* Ensure everything is aligned to the center */
+  flex-direction: column; /* Stack logo and nav elements vertically on smaller screens */
+  justify-content: center; /* Center all elements */
+  align-items: center; /* Ensure everything is aligned to the center */
   flex-wrap: wrap;
   padding: 1.5rem 2rem;
   background-color: black;
@@ -18,22 +18,21 @@ export const Navbar = styled.nav`
 
   /* For larger screens (>= 768px), keep logo on the left and nav on the right */
   @media (min-width: 768px) {
-    flex-direction: row;  /* Keep logo and nav horizontally aligned */
-    justify-content: space-between;  /* Logo on the left, nav on the right */
+    flex-direction: row; /* Keep logo and nav horizontally aligned */
+    justify-content: space-between; /* Logo on the left, nav on the right */
   }
 `;
 
 export const HeaderWrapper = styled.header`
   background-color: black;
   color: white;
-  margin-bottom: 2rem;  /* Adjusted margin to add space between header and the search bar */
-  
+  margin-bottom: 2rem; /* Adjusted margin to add space between header and the search bar */
+
   /* Add some space specifically for smaller screens */
   @media (max-width: 768px) {
-    margin-bottom: 5rem;  /* Increase margin for smaller screens */
+    margin-bottom: 5rem; /* Increase margin for smaller screens */
   }
 `;
-
 
 export const Logo = styled(RouterNavLink)`
   font-family: 'Playfair Display', serif;
@@ -42,11 +41,11 @@ export const Logo = styled(RouterNavLink)`
   color: white;
   text-decoration: none;
   white-space: nowrap;
-  margin-bottom: 1rem;  /* Add margin to the bottom to separate the logo from nav items */
-  
+  margin-bottom: 1rem; /* Add margin to the bottom to separate the logo from nav items */
+
   /* Center the logo for small screens */
   @media (min-width: 768px) {
-    margin-bottom: 0;  /* Remove margin for larger screens */
+    margin-bottom: 0; /* Remove margin for larger screens */
   }
 
   &:hover {
@@ -59,11 +58,11 @@ export const NavContainer = styled.div`
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
-  justify-content: center;  /* Center the navigation links and cart */
+  justify-content: center; /* Center the navigation links and cart */
 
   /* For larger screens (>= 768px) */
   @media (min-width: 768px) {
-    justify-content: flex-end;  /* Align nav items to the right */
+    justify-content: flex-end; /* Align nav items to the right */
     gap: 1rem;
   }
 `;
@@ -72,7 +71,7 @@ export const NavLinks = styled.div`
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  justify-content: center;  /* Ensure the nav links are centered */
+  justify-content: center; /* Ensure the nav links are centered */
 
   a {
     color: white;

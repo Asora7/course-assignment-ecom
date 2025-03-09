@@ -11,12 +11,12 @@ export const CartPageContainer = styled.div`
   max-width: 500px;
   margin: 0 auto;
   margin-top: 6rem;
-  border: 1px solid #ddd;  // Adds a thin stroke with a light gray color
-  border-radius: 8px;  // Optional: Adds rounded corners for a smoother look
+  border: 1px solid #ddd; // Adds a thin stroke with a light gray color
+  border-radius: 8px; // Optional: Adds rounded corners for a smoother look
 
-      @media (max-width: 768px) {
-        margin-top: 4rem; /* Smaller margin-top on small screens */
-    }
+  @media (max-width: 768px) {
+    margin-top: 4rem; /* Smaller margin-top on small screens */
+  }
 `;
 
 export const CartPageTitle = styled.h1`
@@ -40,8 +40,8 @@ export const CartItemCard = styled.div`
 `;
 
 export const ProductImage = styled.img`
-  width: 70px;  /* Reduced width to match CheckoutPage product image */
-  height: 70px;  /* Reduced height to match CheckoutPage product image */
+  width: 70px; /* Reduced width to match CheckoutPage product image */
+  height: 70px; /* Reduced height to match CheckoutPage product image */
   object-fit: cover;
   border-radius: 8px;
 `;
@@ -52,14 +52,14 @@ export const ProductDetails = styled.div`
 `;
 
 export const ProductTitle = styled.p`
-  font-size: 1rem;  /* Reduced font size to match CheckoutPage */
+  font-size: 1rem; /* Reduced font size to match CheckoutPage */
   font-weight: 600;
   color: #333;
-  margin-bottom: 0.3rem;  /* Reduced margin-bottom */
+  margin-bottom: 0.3rem; /* Reduced margin-bottom */
 `;
 
 export const ProductPriceQuantity = styled.p`
-  font-size: 0.9rem;  /* Reduced font size to match CheckoutPage */
+  font-size: 0.9rem; /* Reduced font size to match CheckoutPage */
   color: #666;
 `;
 
@@ -79,7 +79,7 @@ export const RemoveButton = styled.button`
   cursor: pointer;
   transition: background-color 0.3s;
   color: #ff4d4f;
-  
+
   &:hover {
     background-color: #f2f2f2;
   }
@@ -95,19 +95,19 @@ export const TotalPriceSection = styled.div`
   font-weight: 700;
   color: #333;
   text-align: center;
-  max-width: 300px;  /* Matches CheckoutPage total section */
-  padding: 1rem;  /* Increased padding for better readability */
+  max-width: 300px; /* Matches CheckoutPage total section */
+  padding: 1rem; /* Increased padding for better readability */
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin: 2rem 0 1.5rem 0;  /* Adjusted top/bottom margins to center section */
-  align-self: center;  /* Ensure it's centered within the container */
+  margin: 2rem 0 1.5rem 0; /* Adjusted top/bottom margins to center section */
+  align-self: center; /* Ensure it's centered within the container */
 `;
 
 export const CheckoutButton = styled.button`
   background-color: #000;
   color: white;
-  padding: 0.8rem 1.5rem;  /* Adjust the padding to make it more compact */
+  padding: 0.8rem 1.5rem; /* Adjust the padding to make it more compact */
   font-size: 1rem;
   font-weight: 600;
   border: none;
@@ -115,9 +115,9 @@ export const CheckoutButton = styled.button`
   cursor: pointer;
   transition: background-color 0.3s;
   width: 100%;
-  max-width: 500px;  /* Match the width of CartItemCard and TotalPriceSection */
-  margin: 2rem auto;  /* Center the button horizontally with top margin */
-  
+  max-width: 500px; /* Match the width of CartItemCard and TotalPriceSection */
+  margin: 2rem auto; /* Center the button horizontally with top margin */
+
   &:hover {
     background-color: #333;
   }

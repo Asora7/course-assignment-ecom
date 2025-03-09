@@ -12,10 +12,10 @@ export const CartCount = styled.span`
   font-weight: bold;
   margin-left: 0.5rem;
   display: inline-block;
-  background-color: ${({ $hasItems }) => ($hasItems ? "red" : "white")};
-  color: ${({ $hasItems }) => ($hasItems ? "white" : "black")};
-  border: ${({ $hasItems }) => ($hasItems ? "none" : "1px solid black")};
-  
+  background-color: ${({ $hasItems }) => ($hasItems ? 'red' : 'white')};
+  color: ${({ $hasItems }) => ($hasItems ? 'white' : 'black')};
+  border: ${({ $hasItems }) => ($hasItems ? 'none' : '1px solid black')};
+
   ${({ $animate }) =>
     $animate &&
     css`

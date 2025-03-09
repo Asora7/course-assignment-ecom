@@ -1,16 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import ContactPage from "./pages/ContactPage";
-import CartPage from "./pages/CartPage";
-import ProductPage from "./pages/ProductPage";
-import CheckoutPage from "./pages/CheckoutPage";
-import CheckoutSuccessPage from "./pages/CheckoutSuccessPage";
-import GlobalStyles from './components/styles/Global.styles'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import ContactPage from './pages/ContactPage';
+import CartPage from './pages/CartPage';
+import ProductPage from './pages/ProductPage';
+import CheckoutPage from './pages/CheckoutPage';
+import CheckoutSuccessPage from './pages/CheckoutSuccessPage';
+import GlobalStyles from './components/styles/Global.styles';
 
 function App() {
   return (
     <>
-      <GlobalStyles /> 
+      <GlobalStyles />
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />

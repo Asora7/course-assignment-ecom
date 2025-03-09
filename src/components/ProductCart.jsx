@@ -1,5 +1,5 @@
-import { useCart } from "../context/CartContext";
-import { FaTrash } from 'react-icons/fa'; 
+import { useCart } from '../context/CartContext';
+import { FaTrash } from 'react-icons/fa';
 import {
   CartItemCard,
   ProductImage,
@@ -8,15 +8,15 @@ import {
   ProductPriceQuantity,
   RemoveButton,
   TotalPriceSection,
-  QuantityInput, 
-} from "../components/styles/CartPage.styles";
+  QuantityInput,
+} from '../components/styles/CartPage.styles';
 
 function ProductCart() {
   const { cart, removeFromCart, updateQuantity } = useCart();
 
   const handleQuantityChange = (id, newQuantity) => {
-    if (newQuantity >= 1) { 
-      updateQuantity(id, newQuantity); 
+    if (newQuantity >= 1) {
+      updateQuantity(id, newQuantity);
     }
   };
 
@@ -32,16 +32,18 @@ function ProductCart() {
             <ProductTitle>{item.title}</ProductTitle>
             <ProductPriceQuantity>
               ${item.discountedPrice} x
-              <QuantityInput 
-                type="number" 
-                value={item.quantity} 
-                onChange={(e) => handleQuantityChange(item.id, parseInt(e.target.value))}
+              <QuantityInput
+                type="number"
+                value={item.quantity}
+                onChange={(e) =>
+                  handleQuantityChange(item.id, parseInt(e.target.value))
+                }
                 min="1"
               />
             </ProductPriceQuantity>
           </ProductDetails>
           <RemoveButton onClick={() => removeFromCart(item.id)}>
-            <FaTrash /> 
+            <FaTrash />
           </RemoveButton>
         </CartItemCard>
       ))}

@@ -1,15 +1,15 @@
 import styled from 'styled-components';
-import { FaSearch } from 'react-icons/fa'; 
+import { FaSearch } from 'react-icons/fa';
 
 export const PageContainer = styled.div`
-  padding: 0 20px;  /* Add padding on left and right to align with grid */
+  padding: 0 20px; /* Add padding on left and right to align with grid */
 `;
 
 export const ProductGrid = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
-  padding: 0 20px;  /* Same padding for grid */
+  padding: 0 20px; /* Same padding for grid */
   list-style: none;
 `;
 
@@ -63,10 +63,9 @@ export const ViewButton = styled.button`
   transition: background-color 0.3s ease;
   font-size: 0.8rem;
 
-  
   /* Make text bigger on smaller screens */
   @media (max-width: 600px) {
-    font-size: 0.9rem;  /* Increase text size for smaller screens */
+    font-size: 0.9rem; /* Increase text size for smaller screens */
   }
 
   &:hover {
@@ -91,7 +90,7 @@ export const SearchInput = styled.input`
   outline: none;
   transition: border-color 0.3s;
   color: #444; /* Darker text */
-  
+
   &::placeholder {
     color: #555; /* Darker placeholder text */
   }
@@ -108,4 +107,3 @@ export const SearchIcon = styled(FaSearch)`
   transform: translateY(-50%); /* Vertically center the icon */
   color: #444; /* Icon color */
 `;
-

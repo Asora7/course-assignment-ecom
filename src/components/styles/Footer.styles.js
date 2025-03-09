@@ -14,5 +14,6 @@ export const FooterContainer = styled.footer`
 
 export const FooterText = styled.p`
   margin: 0;
-  font-family: 'Arial', sans-serif;  // You can change this to match your project font
+  font-family:
+    'Arial', sans-serif; // You can change this to match your project font
 `;
