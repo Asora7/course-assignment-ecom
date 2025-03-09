@@ -25,6 +25,11 @@ The API used for this project is the [Noroff API](https://v2.api.noroff.dev/onli
 - **Add to Cart**: Adds items to the cart and displays the total on the Cart Page.
 - **Checkout**: Clears the cart after a successful checkout and shows a success message.
 - **Form Validation**: Ensures the contact form is properly filled out before submission.
+- **Change Quantity in Cart**: Functionality to change the quantity of items in the cart.
+- **Checkout Confirmation**: After a successful checkout, a confirmation message is shown and provide an option to return to the homepage.
+- **Remove Items from Cart**: Users can remove item from cart.
+- **Product Price with Discount**: Product pages show discounts if there are any.
+- **Clear Contact Form After Submission**: Resets the contact form after a successful submission, allowing users to easily submit another inquiry.
 
 ## Installation
 
