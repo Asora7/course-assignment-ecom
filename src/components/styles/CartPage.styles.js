@@ -18,7 +18,7 @@ export const CartPageContainer = styled.div`
   border-radius: 8px;  // Optional: Adds rounded corners for a smoother look
 
       @media (max-width: 768px) {
-        margin-top: 2rem; /* Smaller margin-top on small screens */
+        margin-top: 4rem; /* Smaller margin-top on small screens */
     }
 `;
 
