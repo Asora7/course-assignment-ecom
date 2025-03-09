@@ -12,7 +12,7 @@ To apply knowledge of React to build an eCommerce store, allowing users to brows
 
 The API used for this project is the [Noroff API](https://v2.api.noroff.dev/online-shop).
 
-### Pages to Build:
+### Pages:
 - **Homepage**: Displays a list of all products with a look-ahead search bar to filter products by name.
 - **Product Page**: Displays details of a single product, including title, description, image, price (with discount if applicable), and reviews.
 - **Cart Page**: Displays items in the cart and the total price, able to remove item or change quantity
