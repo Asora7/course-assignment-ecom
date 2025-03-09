@@ -16,6 +16,10 @@ export const CheckoutPageContainer = styled.div`
   margin-top: 6rem;  // Added a bit of space from the top
   border: 1px solid #ddd;  // Adds a thin stroke with a light gray color
   border-radius: 8px;  // Optional: Adds rounded corners for a smoother look
+
+      @media (max-width: 768px) {
+        margin-top: 2rem; /* Smaller margin-top on small screens */
+    }
 `;
 
 // Checkout page title (small margin)

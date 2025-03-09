@@ -11,6 +11,10 @@ export const ContactWrapper = styled.section`
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     font-family: 'Arial', sans-serif;
     margin-top: 4rem;
+
+        @media (max-width: 768px) {
+        margin-top: 2rem; /* Smaller margin-top on small screens */
+    }
 `;
 
 export const Title = styled.h1`

@@ -108,7 +108,7 @@ function ContactPage() {
                     <Button type="submit">Submit</Button>
                 </Form>
 
-                {submitted && <SuccessMessage>Thank you for contacting us!</SuccessMessage>}
+                {submitted && <SuccessMessage>Message sent. Thank you for contacting us!</SuccessMessage>}
             </ContactWrapper>
         </Layout>
     );
