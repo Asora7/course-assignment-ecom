@@ -64,7 +64,6 @@ This project uses the following dependencies:
 - **styled-components**: For styled components (CSS-in-JS).
 - **react-icons**: For using icons throughout the app.
 - **react-scripts**: For running and building the React app.
-- **@testing-library/jest-dom**: For DOM testing.
 - **web-vitals**: For measuring web performance.
 
 ### Run script
