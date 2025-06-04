@@ -1,4 +1,4 @@
-# Course Assignment - eCommerce Store
+# Course Assignment - Javascript framewrok
 
 ## Description
 
