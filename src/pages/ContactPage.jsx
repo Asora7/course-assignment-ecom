@@ -73,7 +73,6 @@ function ContactPage() {
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length === 0) {
       setSubmitted(true);
-      console.log(formData);
 
       setFormData({
         fullName: '',
