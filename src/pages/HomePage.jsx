@@ -4,6 +4,12 @@ import { fetchProducts } from '../data/api';
 import * as S from '../components/styles/HomePage.styles';
 import Product from '../components/Product';
 
+/**
+ * HomePage component fetches all products on mount, displays a search bar,
+ * and shows a grid of filtered products as Product cards.
+ *
+ * @returns {JSX.Element} The homepage with search input and product grid.
+ */
 function HomePage() {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState('');

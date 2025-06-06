@@ -11,6 +11,12 @@ import {
   SuccessMessage,
 } from '../components/styles/ContactPage.styles';
 
+/**
+ * ContactPage component renders a contact form with validation.
+ * On successful submit, it clears inputs and shows a thank‐you message.
+ *
+ * @returns {JSX.Element} The contact form layout with validation messages.
+ */
 function ContactPage() {
   const [formData, setFormData] = useState({
     fullName: '',
@@ -22,6 +28,12 @@ function ContactPage() {
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
+  /**
+   * Updates `formData` state when an input changes.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>} e
+   *   – The input event containing `name` and `value`.
+   */
   function handleChange(e) {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -31,6 +43,12 @@ function ContactPage() {
     }
   }
 
+  /**
+   * Validates the contact form. Ensures fullName, subject, and body
+   * have at least 3 characters, and `email` matches a simple regex.
+   *
+   * @returns {{ [field: string]: string }} An object mapping each invalid field to its error message.
+   */
   function validateForm() {
     const newErrors = {};
     if (formData.fullName.length < 3)
@@ -44,6 +62,12 @@ function ContactPage() {
     return newErrors;
   }
 
+  /**
+   * Handles form submission. Prevents default, validates data, shows errors
+   * if any. On successful validation, logs to console, clears the form, and shows success message.
+   *
+   * @param {React.FormEvent<HTMLFormElement>} e – The form submission event.
+   */
   function handleSubmit(e) {
     e.preventDefault();
     const validationErrors = validateForm();
@@ -57,7 +81,6 @@ function ContactPage() {
         email: '',
         body: '',
       });
-
       setErrors({});
     } else {
       setErrors(validationErrors);

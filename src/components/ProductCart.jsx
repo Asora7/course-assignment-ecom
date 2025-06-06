@@ -11,6 +11,15 @@ import {
   QuantityInput,
 } from '../components/styles/CartPage.styles';
 
+/**
+ * ProductCart component renders all items currently in the cart,
+ * allows quantity updates, and shows the total price at the bottom.
+ *
+ * It fetches `cart`, `removeFromCart`, and `updateQuantity` from CartContext.
+ *
+ * @returns {JSX.Element} A list of cart item cards with images, titles,
+ *   quantity inputs, remove buttons, and a total price section.
+ */
 function ProductCart() {
   const { cart, removeFromCart, updateQuantity } = useCart();
 
@@ -36,7 +45,7 @@ function ProductCart() {
                 type="number"
                 value={item.quantity}
                 onChange={(e) =>
-                  handleQuantityChange(item.id, parseInt(e.target.value))
+                  handleQuantityChange(item.id, parseInt(e.target.value, 10))
                 }
                 min="1"
               />

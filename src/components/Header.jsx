@@ -8,6 +8,12 @@ import {
   NavLinks,
 } from './styles/Header.styles';
 
+/**
+ * Header component renders the top navigation bar, including the site logo,
+ * links to Home and Contact pages, and the CartIcon component.
+ *
+ * @returns {JSX.Element} The site header containing navigation links and cart icon.
+ */
 function Header() {
   return (
     <HeaderWrapper>

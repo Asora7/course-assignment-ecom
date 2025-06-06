@@ -8,6 +8,12 @@ import {
   BackToStoreButton,
 } from '../components/styles/CheckoutSuccessPage.styles';
 
+/**
+ * CheckoutSuccessPage component shows an order‐success message
+ * and clears the cart when mounted.
+ *
+ * @returns {JSX.Element} A “thank you” message and a link back to the store.
+ */
 function CheckoutSuccessPage() {
   const { clearCart } = useCart();
 

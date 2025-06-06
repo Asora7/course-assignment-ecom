@@ -7,6 +7,11 @@ import CheckoutPage from './pages/CheckoutPage';
 import CheckoutSuccessPage from './pages/CheckoutSuccessPage';
 import GlobalStyles from './components/styles/Global.styles';
 
+/**
+ * App component sets up routing for all top‐level pages and applies global CSS.
+ *
+ * @returns {JSX.Element} The main Router with defined Routes.
+ */
 function App() {
   return (
     <>

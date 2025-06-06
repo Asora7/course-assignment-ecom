@@ -8,10 +8,21 @@ import {
   CheckoutButton,
 } from '../components/styles/CartPage.styles';
 
+/**
+ * CartPage component displays the current cart items, total count, 
+ * and a button to proceed to checkout.
+ *
+ * @returns {JSX.Element} A layout wrapping cart contents and checkout button.
+ */
 function CartPage() {
   const { cart } = useCart();
   const navigate = useNavigate();
 
+  /**
+   * Calculates the total number of items in the cart.
+   *
+   * @returns {number} The sum of all item quantities in the cart.
+   */
   const getCartItemCount = () => {
     return cart.reduce((total, item) => total + item.quantity, 0);
   };

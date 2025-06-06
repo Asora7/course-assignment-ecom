@@ -16,6 +16,12 @@ import {
   GoBackButton,
 } from '../components/styles/CheckoutPage.styles';
 
+/**
+ * CheckoutPage component displays all cart items for final review,
+ * calculates the total price, and lets the user confirm or go back.
+ *
+ * @returns {JSX.Element} A checkout layout or empty‐cart message if no items.
+ */
 function CheckoutPage() {
   const { cart } = useCart();
   const navigate = useNavigate();
@@ -41,6 +47,10 @@ function CheckoutPage() {
     );
   }
 
+  /**
+   * Handler for final checkout confirmation. Prompts the user,
+   * and if confirmed, navigates to “/checkout-success”.
+   */
   function handleCheckout() {
     const confirmCheckout = window.confirm(
       'Are you sure you want to place this order?'

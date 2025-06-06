@@ -5,6 +5,12 @@ import { useCart } from '../context/CartContext';
 import Layout from '../components/Layout';
 import * as S from '../components/styles/ProductPage.styles';
 
+/**
+ * ProductPage component fetches a single product by its ID parameter,
+ * displays its details, calculates discount, and lets user add it to cart.
+ *
+ * @returns {JSX.Element} The product detail page layout.
+ */
 function ProductPage() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -20,7 +26,6 @@ function ProductPage() {
         console.error('Error fetching product:', error);
       }
     }
-
     getProduct();
   }, [id]);
 
