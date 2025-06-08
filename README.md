@@ -1,5 +1,9 @@
 # Course Assignment - Javascript framewrok
 
+### Live Site URL
+
+[Live site](https://urbannestecom.netlify.app)
+
 ## Description
 
 This project is a simple eCommerce store built with React. The store fetches product data from an external API and displays it in a structured layout. It includes features like a search bar, product details page, cart management, checkout page, and a contact form.
@@ -88,6 +92,3 @@ This project uses the following dependencies:
 
 [Github Repository](https://github.com/Asora7/course-assignment-ecom)
 
-### Live Site URL
-
-[Live site](https://urbannestecom.netlify.app)
